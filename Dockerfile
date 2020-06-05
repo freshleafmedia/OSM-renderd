@@ -48,6 +48,7 @@ RUN apt-get update && \
 
 COPY --from=renderd /usr/local/lib /usr/local/lib
 COPY --from=renderd /usr/local/bin/renderd /usr/local/bin/renderd
+COPY --from=renderd /usr/local/bin/render_list /usr/local/bin/render_list
 
 RUN ldconfig
 
